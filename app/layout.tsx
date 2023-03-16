@@ -1,5 +1,5 @@
 import './globals.css'
-import Header from '../components/HeaderFooter/Header'
+import Navbar from './components/navbar/navbar'
 
 export const metadata = {
   title: 'Gift Lister',
@@ -14,7 +14,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header/>
+        <Navbar/>
         {children}
       </body>
     </html>

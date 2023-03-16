@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Rocky Balboa",
+        "age": 19,
+        "gender": "Non-binary",
+        "country": "US"
+    },
+    {
+        "name": "Charles Cheese",
+        "age": 29,
+        "gender": "Man",
+        "country": "US"
+    },
+    {
+        "name": "Carmen San Diego",
+        "age": 20,
+        "gender": "Woman",
+        "country": "US"
+    },
+    {
+        "name": "Bob Belcher",
+        "age": 43,
+        "gender": "Unspecified",
+        "country": "US"
+    }
+]

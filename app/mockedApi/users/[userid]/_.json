@@ -1,0 +1,33 @@
+{
+    "id": "443d222a-0f1e-4e85-9d54-30ce6e8f54be",
+    "username" : "boxer23",
+    "email" : "rbalboa@gmail.com",
+    "name": "Rocky Balboa",
+    "age": 19,
+    "gender": "Non-binary",
+    "country": "US",
+    "connections" : [
+        {
+            "id": "fb249f49-665c-4115-a95e-58a886699829",
+            "name": "Charles Cheese",
+            "age": 29
+        },
+        {
+            "id": "05a606ca-7422-4653-bc71-382b622dd4a9",
+            "name": "Carmen San Diego",
+            "age": 20
+        },
+        {
+            "id": "26c19757-a954-46de-a7f0-a812b3940def",
+            "name": "Bob Belcher",
+            "age": 43
+        }
+    ],
+    "wishList": [
+        {
+            "title": "Le Spatula",
+            "description": "Spatula with Port and Starboard Attachments",
+            "storeUrl": "https://google.com"
+        }
+    ]
+}
