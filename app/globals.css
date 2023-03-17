@@ -106,6 +106,4 @@ a {
   }
 }
 
-section {
-  @apply md:flex;
-}
+

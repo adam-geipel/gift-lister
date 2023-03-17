@@ -1,0 +1,23 @@
+.loginModal {
+    @apply flex;
+    @apply px-2;
+    @apply content-center;
+     
+}
+
+.form {
+    @apply grid;
+    @apply grid-cols-1;
+
+    
+}
+
+.form input {
+
+    @apply justify-between;
+}
+
+.loginModal button {
+    @apply dark:bg-gray-900;
+    @apply dark:border-gray-700;
+}
