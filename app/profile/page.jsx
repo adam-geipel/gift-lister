@@ -9,8 +9,11 @@ export default async function Page() {
     return (
         <>
             <main className={styles.main}>
+                <h1>Bio</h1>
                 <UserDetails/>
+                <h1>Wish List</h1>
                 <WishList/>
+                <h1>Connections</h1>
                 <Connections/>
             </main>
         </>

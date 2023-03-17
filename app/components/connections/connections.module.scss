@@ -1,0 +1,27 @@
+.connections {
+    @apply flex;
+    @apply flex-col;
+}
+
+
+.card {
+    @apply my-3;
+    @apply px-10;
+    @apply py-5;
+    @apply bg-white;
+    @apply border-gray-200;
+    @apply dark:bg-gray-900;
+    @apply dark:bg-gray-700;
+    @apply rounded-lg;
+    @apply md:shrink-0;
+}
+  
+.card h1 {
+    span {
+        @apply text-xs;
+    }
+}
+
+.card a {
+@apply font-semibold;
+}

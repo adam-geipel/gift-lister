@@ -1,0 +1,31 @@
+.userDetails {
+
+    @apply grid;
+    @apply grid-cols-2;
+}
+    
+.card {
+
+    @apply px-10;
+    @apply py-5;
+    @apply bg-white;
+    @apply border-gray-200;
+    @apply dark:bg-gray-900;
+    @apply dark:bg-gray-700;
+    @apply rounded-lg;
+    @apply col-span-full;
+}
+
+.row {
+    @apply grid;
+    @apply grid-cols-3;
+}
+
+.row h3 {
+    @apply pr-10;
+}
+
+.row p {
+    @apply col-span-2;
+}
+ 
