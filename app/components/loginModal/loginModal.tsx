@@ -1,6 +1,5 @@
 'use client'
 
-import { Formik, Field, Form, FormikHelpers } from 'formik';
 import styles from "./loginModal.module.scss";
 
 interface LoginValues {
@@ -10,32 +9,27 @@ interface LoginValues {
 
 export default function LoginModal() {
 
-
     return (
-        <div className={styles.loginModal}>
-            <Formik
-                initialValues={{
-                    username: '',
-                    password: '',
-                }}
+        <div className={styles.loginModal}> 
+            <div className={styles.header}>
+                <h1>Log in to start building</h1> 
+                <h1>your wish list</h1>
+            </div>
+            <form className={styles.form}>
+                <div className={styles.field}>
+                    <label for="username">Username</label>
+                    <input id="username" name="username" type="text" placeholder="Username" />    
+                </div>
+                <div className={styles.field}>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Password" />    
+                </div>
 
-                onSubmit={(
-                    values: LoginValues, 
-                    { setSubmitting }: FormikHelpers<LoginValues>
-                ) => {
-                    setTimeout(() => {
-                    alert(JSON.stringify(values, null, 2));
-                    setSubmitting(false);
-                    }, 500);
-                }}
-        
-            >
-                <Form className={styles.form}>
-                    <Field id="username" name="username" placeholder="Username" />
-                    <Field type="password" id="password" name="password" placeholder="Password" />
+                <div className={styles.buttonRow}>
                     <button type="submit" className={styles.button}>Login</button>
-                </Form>
-            </Formik>
+                    <button className={styles.button}>Cancel</button>
+                </div>
+            </form>
         </div>
     )
 }
