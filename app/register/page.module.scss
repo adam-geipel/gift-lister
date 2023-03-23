@@ -1,0 +1,60 @@
+.main {
+    @apply flex justify-center items-center h-screen;
+    @apply object-contain;
+}
+
+.registerForm {    
+    @apply bg-white border-gray-200;
+    @apply dark:bg-gray-900 dark:border-gray-700;
+    @apply place-items-center absolute;
+    @apply p-10;
+}
+
+.header {
+    @apply p-5;
+}
+
+.registerForm h1 {
+    @apply flex;
+    @apply justify-center items-center;
+}
+
+.form {
+    @apply grid;
+    @apply grid-cols-1;
+    @apply m-auto;
+    @apply pt-5;
+
+    @apply justify-between;
+    @apply items-center;
+}
+
+.field {
+    @apply grid mb-2 md:grid-cols-1;
+}
+
+.field label {
+    @apply block mb-2 text-sm font-medium;
+}
+
+.field input {
+    @apply  text-sm rounded-lg block w-full p-2.5;
+    @apply bg-gray-50 border border-gray-300 text-gray-900 focus:border-blue-500 focus:ring-blue-500;
+    @apply  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500;
+}
+
+.loginModal button {
+    @apply dark:bg-gray-900;
+    @apply dark:border-gray-700;
+}
+
+.buttonRow {
+    @apply grid grid-cols-2 content-center content-evenly gap-5 p-5;
+    
+}
+
+.buttonRow button {
+    @apply text-sm rounded-lg block p-2.5;
+    @apply md:border-0;
+    @apply dark:md:bg-gray-700 dark:border-gray-700; 
+}

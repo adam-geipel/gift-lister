@@ -6,6 +6,9 @@ interface LoginValues {
     username: string;
     password: string;
 }
+/* todo: use this to control logins:
+ https://dev.to/dawnind/authentication-with-credentials-using-next-auth-and-mongodb-part-1-m38
+*/
 
 export default function LoginModal() {
 
@@ -17,11 +20,11 @@ export default function LoginModal() {
             </div>
             <form className={styles.form}>
                 <div className={styles.field}>
-                    <label for="username">Username</label>
+                    <label>Username</label>
                     <input id="username" name="username" type="text" placeholder="Username" />    
                 </div>
                 <div className={styles.field}>
-                    <label for="password">Password</label>
+                    <label>Password</label>
                     <input type="password" id="password" name="password" placeholder="Password" />    
                 </div>
 

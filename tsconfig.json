@@ -37,8 +37,7 @@
     "**/**/**/*.tsx",
     "**/**/**/*.{js,ts,jsx,tsx,css,scss}",
     "**/**/**/*.scss",
-    ".next/types/**/*.ts"
-  ],
+    ".next/types/**/*.ts", "app/register/page.jsx", "app/api/register/route.js"  ],
   "exclude": [
     "node_modules"
   ]
