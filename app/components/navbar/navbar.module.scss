@@ -65,5 +65,12 @@
 }
 
 .logoutArea {
+
+}
+
+.logoutArea button {
     
+    @apply text-sm rounded-lg block p-2.5;
+    @apply md:border-0;
+    @apply dark:md:bg-gray-700 dark:border-gray-700; 
 }

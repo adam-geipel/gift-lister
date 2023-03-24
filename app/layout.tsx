@@ -1,7 +1,10 @@
+'use client'
+
 import './globals.css'
 import Navbar from './components/navbar/navbar'
 import Footer from './components/footer/footer'
 import { Inter } from 'next/font/google'
+import { SessionProvider } from 'next-auth/react';
 
 export const metadata = {
   title: 'Gift Lister',
@@ -19,9 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar/>
-        {children}
-        <Footer/>
+        <SessionProvider refetchOnWindowFocus={false}>
+          <Navbar/>
+          {children}
+          <Footer/>
+        </SessionProvider>
       </body>
     </html>
   )
