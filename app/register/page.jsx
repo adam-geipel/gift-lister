@@ -13,14 +13,15 @@ export default function Page() {
         return;
     }
 
-    const res = await fetch(`http://localhost:3000/api/register`, {
-        body: {
-            userName: event.target.username.value,
+    const res = await fetch(`http://localhost:3000/api/auth/register`, {
+        body: JSON.stringify({
+            username: event.target.username.value,
             firstName: event.target.firstName.value,
             lastName: event.target.lastName.value,
             email: event.target.email.value,
             password: event.target.password.value,
-        },
+            birthDate: event.target.password.birthDate
+        }),
         method: 'POST',
         headers: {
             'Content-Type' : 'application/json'
@@ -59,13 +60,10 @@ export default function Page() {
                     <label>Last Name</label>
                     <input required id="lastName" name="lastName" type="text" placeholder="Last Name" />    
                 </div>
-                
                 <div className={styles.field}>
                     <label>Date of Birth</label>
                     <input required id="birthDate" name="birthDate" type="date"/>  
                 </div>
-                
-
                 <div className={styles.field}>
                     <label>Username</label>
                     <input required id="username" name="username" type="text" placeholder="Username" />    

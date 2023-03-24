@@ -1,5 +1,7 @@
+'use client'
 
 import Link from 'next/link';
+import { signOut } from 'next-auth/react'
 import navbarStyles from './navbar.module.scss';
 
 export default function Navbar() {
@@ -19,6 +21,9 @@ export default function Navbar() {
                             <Link href="/users">Find Friends</Link>
                         </li>
                     </ul>
+                </div>
+                <div className={navbarStyles.logoutArea}>
+                    <button onClick={() => signOut({callbackUrl: 'http://localhost:3000/login'})}>Sign Out</button>
                 </div>
             </header>
         </>
