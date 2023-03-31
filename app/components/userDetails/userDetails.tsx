@@ -1,32 +1,42 @@
 'use client';
-import React, { use } from 'react'
-import { getUser } from '../../api/users/usersApi';
-import styles from './userDetails.module.scss';
-  
-export default function UserDetails() {
 
-    const user = use(getUser("foo"));
+import React from 'react';
+import styles from './userDetails.module.scss';
+import 'react-country-dropdown/dist/index.css';
+
+const UserDetails = async (user : any) => {
 
     return (
         <section className={styles.userDetails}>
-            <div className={styles.card}>
+            <h1>Bio</h1>
+            <div className={styles.card} id="userBioCard">
+                <div hidden>
+                    <label>ID</label>
+                    <p id="id">{user.email}</p>
+                </div>
                 <div className={styles.row}>
-                    <h3>Name</h3>
+                    <label>Name</label>
                     <p>{user.name}</p>
                 </div>
                 <div className={styles.row}>
-                    <h3>Age</h3>
-                    <p>{user.age}</p>
+                    <label>Email</label>
+                    <p>{user.email}</p>
                 </div>
                 <div className={styles.row}>
-                    <h3>Gender</h3>
+                    <label>Birthday</label>
+                    <p>{user.birthday}</p>
+                </div>
+                <div className={styles.row}>
+                    <label>Gender</label>
                     <p>{user.gender}</p>
                 </div>
                 <div className={styles.row}>
-                    <h3>Country</h3>
+                    <label>Country</label>
                     <p>{user.country}</p>
-                </div>
+                </div>                       
             </div>
         </section>
     )
 }
+
+export default UserDetails;

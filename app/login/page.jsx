@@ -5,7 +5,6 @@ import { signIn } from "next-auth/react";
 
 export default function Page() {
 
-  
   const status = async () => signIn('google');
 
   return (

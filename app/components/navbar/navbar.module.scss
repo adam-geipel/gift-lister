@@ -1,23 +1,23 @@
 .navbar {
- 
     @apply flex;
     @apply px-2;
     @apply bg-white;
     @apply border-gray-200;
     @apply dark:bg-gray-900;
     @apply dark:border-gray-700;
+    @apply w-full;
 }
 
-.header {
-    @apply grow-0;
+.brand {
     @apply p-3;
-    @apply text-gray-500;
-    @apply dark:text-white;
+    @apply flex-none;
+    //@apply text-gray-500;
+    //@apply dark:text-white;
 }
 
 .links {
-    @apply flex;
-    @apply flex-row;
+    @apply flex flex-row;
+    @apply basis-2/3;
     @apply p-4;
     @apply mt-4;
     @apply rounded-lg;
@@ -34,17 +34,9 @@
     }
 }
 
-.links ul {
-    @apply flex;
-    @apply flex-row;
-}
-
 .links li {
-
-    @apply flex;
-    @apply flex-row;
-    @apply py-3;
     @apply my-3;
+    @apply mx-3;
     @apply md:mr-3;
     @apply px-5;
     @apply py-3;
@@ -61,16 +53,30 @@
         @apply dark:bg-gray-600;
         @apply dark:text-white;
     }
-    
 }
 
-.logoutArea {
+.userSettings {
 
-}
+    @apply my-3;
+    @apply mx-3;
+    @apply md:mr-3;
+    @apply px-5;
+    @apply py-3;
+    @apply md:shrink-0;
+    @apply flex-none;
 
-.logoutArea button {
-    
-    @apply text-sm rounded-lg block p-2.5;
-    @apply md:border-0;
-    @apply dark:md:bg-gray-700 dark:border-gray-700; 
+    [class*='active'] {
+        .a {
+            @apply dark:md:bg-gray-700 dark:border-gray-700;
+        }    
+    }
+
+    .userCard {
+        @apply flex flex-row gap-5 justify-between;
+        @apply m-auto;
+    }
+
+    p {
+        @apply content-center;
+    }
 }

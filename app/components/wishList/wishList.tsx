@@ -1,13 +1,10 @@
 'use client';
 import React, { use } from 'react'
 import Link from 'next/link'
-import { getUser } from '../../api/users/usersApi';
 import styles from './wishlist.module.scss';
 
 
-export default function WishList() {
-
-    const user = use(getUser("foo"));
+const WishList = () => {
 
     return (
         <section className={`${styles.wishlist}`}>
@@ -23,3 +20,5 @@ export default function WishList() {
         </section>
     )
 }
+
+export default WishList;

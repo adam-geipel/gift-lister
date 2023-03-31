@@ -1,12 +1,12 @@
 'use client';
-import React, { use } from 'react'
+import React from 'react'
 import Link from 'next/link'
-import { getUser } from '../../api/users/usersApi';
 import styles from './connections.module.scss';
 import { Connection } from '../../types/connection';
-export default function Connections() {
 
-    const user = use(getUser("foo"));
+
+const Connections = () => {
+
 
     return (
         <section className={`${styles.connections}`}>
@@ -24,3 +24,5 @@ export default function Connections() {
         </section>
     )
 }
+
+export default Connections;

@@ -1,33 +1,35 @@
-'use client'
 
+import  Navbar  from './components/navbar/navbar'; 
+import Footer from './footer'
+import Auth from './auth';
+import { Inter } from 'next/font/google';
 import './globals.css'
-import Navbar from './components/navbar/navbar'
-import Footer from './components/footer/footer'
-import { Inter } from 'next/font/google'
-import { SessionProvider } from 'next-auth/react';
 
 export const metadata = {
   title: 'Gift Lister',
   description: 'The little gift list aggregator',
 };
 
-
 const inter = Inter({ subsets: ['latin'] })
 
-export default function RootLayout({
+const RootLayout = async ({
   children,
 }: {
-  children: React.ReactNode
-}) {
+  children: React.ReactNode,
+}) => {
+
   return (
     <html lang="en">
       <body className={inter.className}>
-        <SessionProvider refetchOnWindowFocus={false}>
-          <Navbar/>
+        {/* @ts-expect-error Server Component */}
+        <Auth>
+          <Navbar />
           {children}
-          <Footer/>
-        </SessionProvider>
+        </Auth>
+        <Footer/>
       </body>
     </html>
   )
 };
+
+export default RootLayout;

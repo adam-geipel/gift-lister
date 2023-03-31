@@ -28,4 +28,9 @@
 .row p {
     @apply col-span-2;
 }
- 
+
+.buttonRow {
+    .button {
+        @apply p-5;
+    }
+}

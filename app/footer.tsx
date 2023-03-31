@@ -2,10 +2,10 @@
 
 export default function Footer() {
     return (
-        <section>
+        <footer>
             <div>
-                A learning exercise by Adam Geipel
+                <p>A learning exercise by Adam Geipel</p>
             </div>
-        </section>
+        </footer>
     )
 }
